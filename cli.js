@@ -1,6 +1,7 @@
 var calc = require('./calculator');
 
-var a = Number(process.argv[2]);
-var b = Number(process.argv[3]);
+var operation = process.argv[2];
+var a = Number(process.argv[3]);
+var b = Number(process.argv[4]);
 
-console.log(calc.addition(a,b));
+console.log(calc.operations(operation,a,b));
