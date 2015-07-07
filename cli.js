@@ -1,6 +1,10 @@
 var calc = require('./calculator');
 
-var a = Number(process.argv[2]);
-var b = Number(process.argv[3]);
+var numberStrings = process.argv.slice(2);
+var numbers = [];
 
-console.log(calc.addition(a,b));
+numberStrings.forEach(function(numberString) {
+  numbers.push(Number(numberString));
+});
+
+console.log(calc.addition(numbers));
